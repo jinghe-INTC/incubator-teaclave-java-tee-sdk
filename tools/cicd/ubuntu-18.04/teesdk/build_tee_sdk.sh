@@ -28,9 +28,9 @@ git clone https://github.com/intel/linux-sgx.git
 
 pushd linux-sgx && git checkout stdc_ex_1.0
 
-make preparation && cp external/toolset/ubuntu18.04/* /usr/local/bin && which ar as ld objcopy objdump ranlib
+make preparation
 
-make sdk && make sdk_install_pkg && popd
+make sdk && make sdk_install_pkg_no_mitigation && popd
 
 cp linux-sgx/linux/installer/bin/sgx_linux_x64_sdk_*.bin ./
 
